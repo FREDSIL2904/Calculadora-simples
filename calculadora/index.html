@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="pr-br">
+<meta charset="utf-8"/>
+<head>
+	<title>Calculadora</title>
+<link rel="stylesheet" href="calcula.css"/>
+</head>
+<body class="fundo">
+	<div class="calculador">
+	<p id="resultado"></p>
+	<table>
+<tr>
+<td><button class="botao" onclick="clean()"><i style="font-weight:900; color:#ff7600;">C</i></button></td>
+<td><button class="botao" onclick="back()"><</button></td>
+<td><button class="botao"onclick="insert('/')">/</button></td>
+<td><button class="botao" onclick="insert('*')">*</button></td>
+</tr>
+<td><button class="botao" onclick="insert('7')">7</button></td>
+<td><button class="botao" onclick="insert('8')">8</button></td>
+<td><button class="botao" onclick="insert('9')">9</button></td>
+<td><button onclick="insert('-')" class="botao">-</button></td>
+</tr>
+
+<td><button class="botao" onclick="insert('4')">4</button></td>
+<td><button class="botao" onclick="insert('5')">5</button></td>
+<td><button class="botao" onclick="insert('6')">6</button></td>
+<td><button class="botao"onclick="insert('+')">+</button></td>
+</tr>
+
+<td><button class="botao" onclick="insert('1')">1</button></td>
+<td><button class="botao" onclick="insert('2')">2</button></td>
+<td><button class="botao" onclick="insert('3')">3</button></td>
+<td rowspan="2"><button onclick="calcular()"id="igual"class="botao"style="height:135px">=</button></td>
+</tr>
+
+<td colspan="2"><button class="botao" onclick="insert('0')" style="width:135px">0</button></td>
+<td><button class="botao"onclick="insert('.')">.</button></td>
+</div>
+</tr>
+	</table>
+	<script>
+	  function insert(num)
+	  {
+	   var numero = document.getElementById('resultado').innerHTML;
+	   document.getElementById("resultado").innerHTML = numero + num;
+	  }
+	  function clean(){
+	    document.getElementById('resultado').innerHTML = "";
+	  }
+	  function back(){
+	    var resultado = document.getElementById('resultado').innerHTML;
+	    document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+	  }
+	  function calcular(){
+	    var resultado = document.getElementById('resultado').innerHTML;
+	    if(resultado){
+	      document.getElementById('resultado').innerHTML = eval(resultado);
+	    }
+	    else{
+	      document.getElementById('resultado').innerHTML = "Nada...";
+	    }
+	  }
+	</script>
+</body>
+</html>

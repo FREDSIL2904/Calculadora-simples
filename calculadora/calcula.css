@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Anton&family=DynaPuff&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+}
+#igual{
+  background:linear-gradient(#c76f00,#ff6700);
+}
+.fundo{
+	background: rgb(84,171,249);
+background: radial-gradient(circle, rgba(84,171,249,1) 18%, rgba(5,43,138,1) 97%);
+	height: 100vh;
+	color: #FFFFFF;
+	font-family: Trebuchet MS;
+	text-align: center;
+}
+.calculador{
+	position: absolute;
+	background-color:rgb(37,37,37);
+	top: -5%;
+	left: 29%;
+	transform: translate(-25%,35%);
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow:25px 10px 25px rgba(0,0,0,0.45), -15px 10px 30px rgba(0,0,0,0.45);
+}
+.botao{
+  width: 60px;
+  height:60px;
+  font-family: Segoe UI;
+  font-size: 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-image: linear-gradient(48deg,#2f2f2f,#3f3f3f);
+  color:#fff;
+  border: none;
+  margin: 5px;
+  box-shadow:-4px 5px 8px rgba(0,0,0,0.45);
+  font-weight:400px;
+}
+.botao:hover{
+  background-color: #000;
+}
+#resultado{
+  background-color:#dddddd;
+  width: 255px;
+  height: 60px;
+  margin: 20px 10px 20px 8px;
+  font-size: 50px;
+  font-weight: 600;
+  color:#000;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  font-family:Segoe UI;
+  box-shadow:-4px 5px 5px rgba(0,0,0,0.45);
+  border:5px solid #000;
+}
